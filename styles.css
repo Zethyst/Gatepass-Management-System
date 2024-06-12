@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+nav {
+  text-align: center;
+  margin: 20px 0;
+}
+section {
+  text-align: center;
+  margin: 20px 0;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #007bff;
+}
+section a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+#gatepasses-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gatepass-item {
+  margin: 20px 20px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.gatepass-item div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.approve{
+  background: green;
+  color: white;
+  cursor: pointer;
+}
+.reject{
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+#approveText{
+  padding: 10px;
+  border: 4px solid green;
+  color: green;
+  text-align: center;
+  font-weight: 800;
+  border-radius: 10px;
+}
+#rejectText{
+  padding: 10px;
+  border: 4px solid red;
+  color: red;
+  text-align: center;
+  font-weight: 800;
+  border-radius: 10px;
+}
