@@ -1,13 +1,12 @@
 document.getElementById('register-form').addEventListener('submit', async function (e) {
     e.preventDefault();
     const BaseURL = `http://localhost:5000`;
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+    const form = document.getElementById('register-form');
+    const formData = new FormData(form);
     try {
       const response = await fetch(`${BaseURL}/api/register`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password })
+        body: formData
       });
       
       if (response.ok) {

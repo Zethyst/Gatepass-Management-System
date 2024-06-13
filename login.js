@@ -15,6 +15,7 @@ document.getElementById('login-form').addEventListener('submit', async function 
       console.log(data);
       if (data.token) {
         localStorage.setItem('token', data.token);
+        localStorage.setItem('userID', data.user);
         window.location.href = 'gatepasses.html';
       } else {
         alert('Invalid login credentials');

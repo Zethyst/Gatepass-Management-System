@@ -72,44 +72,104 @@ form button:hover {
 
 #gatepasses-list {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 2px solid rgb(80, 79, 79);
+  margin: 20px 45px;
+  padding: 30px;
 }
 .gatepass-item {
-  margin: 20px 20px;
+  margin: 20px;
   background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  width: 90%;
+  box-shadow: 10px 2px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* flex-direction: column; */
 }
-.gatepass-item div{
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.gatepass-item #buttons {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
-.approve{
+.btnContainer {
+  align-self: flex-end;
+  margin: 10px auto;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  padding: 10px 0;
+}
+.approve {
   background: green;
   color: white;
   cursor: pointer;
+  padding: 5px;
 }
-.reject{
+.reject {
   background-color: red;
   color: white;
   cursor: pointer;
+  padding: 5px;
 }
-#approveText{
-  padding: 10px;
+#approveText {
+  padding: 4px;
   border: 4px solid green;
   color: green;
   text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   font-weight: 800;
+  width: 100px;
   border-radius: 10px;
+  transform: translateY(5px);
 }
-#rejectText{
-  padding: 10px;
+#rejectText {
+  transform: translateY(5px);
+  padding: 4px;
   border: 4px solid red;
   color: red;
   text-align: center;
   font-weight: 800;
   border-radius: 10px;
+}
+.warning {
+  color: red;
+}
+.clear {
+  color: green;
+}
+.disabled {
+  opacity: 0.6;
+}
+.imgContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 400px;
+  gap: 10px;
+}
+.id_proof {
+  height: 300px;
+  width: 400px;
+  object-fit: contain;
+}
+.dp {
+  height: 300px;
+  width: 400px;
+  object-fit: contain;
 }

@@ -47,21 +47,30 @@ document.addEventListener('DOMContentLoaded', function () {
         const gatepassItem = document.createElement('div');
         gatepassItem.classList.add('gatepass-item');
         gatepassItem.innerHTML = `
-        <h3>${gatepass.type} Gatepass</h3>
+        <div class="infoContainer">
+        <h3>Visitor Gatepass</h3>
+        <bold><strong>Registration Number:</strong> ${
+            gatepass.registrationNo
+        }</bold>
         <p><strong>Visitor Name:</strong> ${gatepass.visitorName}</p>
         <p><strong>Date of Visit:</strong> ${formatDateToDDMMYYYY(gatepass.dateOfVisit)}</p>
         <p><strong>Purpose:</strong> ${gatepass.purpose}</p>
         <p><strong>Designation:</strong> ${gatepass.designation}</p>
         <p><strong>Department:</strong> ${gatepass.department}</p>
-        ${gatepass.type === 'Material' ? `<p><strong>Materials:</strong> ${gatepass.materials}</p>` : ''}
         <p><strong>Status:</strong> ${gatepass.status}</p>
+        <p><strong>User ID:</strong> ${gatepass.id}</p>
+        <div class="btnContainer">
         ${gatepass.status === 'Pending' ? 
-          `<div id="buttons">
+            `<div id="buttons">
             <button class="approve" data-id="${gatepass.gatepass_id}">Approve</button>
             <button class="reject" data-id="${gatepass.gatepass_id}">Reject</button>
-          </div>` : 
-          (gatepass.status === 'Approved' ? '<p id="approveText">Approved</p>' : '<p id="rejectText">Rejected</p>')
-        }
+            </div>` : 
+            (gatepass.status === 'Approved' ? '<p id="approveText">Approved</p>' : '<p id="rejectText">Rejected</p>')
+         }
+        </div>
+        </div>
+        <div class="imgContainer"><strong>Profile Pic:</strong> <img src="${gatepass.profile_pic}" alt="Profile Pic" class="dp"/></div>
+        <div class="imgContainer"><strong>ID Proof:</strong> <img src="${gatepass.id_proof}" alt="ID Proof" class="id_proof"/></div>
       `;
         gatepassesList.appendChild(gatepassItem);
       });
